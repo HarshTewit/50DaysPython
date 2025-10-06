@@ -21,3 +21,12 @@ bio = generateBio(style)
 print("*" * 50)
 print(textwrap.dedent(bio))
 print("*"*50)
+
+save = input("Do you want to save this bio to a text file? {y/n)}").lower()
+
+if save == "y":
+    filename = f"{name.lower().replace(' ', '_')}_bio.txt"
+    with open(filename, "w", encoding="utf-8") as f:
+        f.write(bio)
+    print("File Saved.")
+

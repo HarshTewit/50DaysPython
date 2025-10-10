@@ -9,6 +9,8 @@ if not os.path.exists(FILE_NAME):
         writer = csv.writer(f)
         writer.writerow(["Name", "Marks"])
 
+#Collect data in dictionaries 
+
 def collect_student_data():
     students = {}
 

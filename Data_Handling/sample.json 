@@ -1,0 +1,63 @@
+{
+  "store": {
+    "name": "The Everyday Mart",
+    "location": {
+      "address": "123 Main Street",
+      "city": "Mumbai",
+      "zip": "400001"
+    },
+    "employees": [
+      {
+        "id": 1,
+        "name": "Ravi Kumar",
+        "role": "Manager",
+        "age": 35,
+        "isFullTime": true
+      },
+      {
+        "id": 2,
+        "name": "Aisha Singh",
+        "role": "Cashier",
+        "age": 28,
+        "isFullTime": false
+      },
+      {
+        "id": 3,
+        "name": "Arjun Mehta",
+        "role": "Stock Clerk",
+        "age": 22,
+        "isFullTime": true
+      }
+    ],
+    "products": [
+      {
+        "id": 101,
+        "name": "Milk",
+        "category": "Dairy",
+        "price": 45.5,
+        "inStock": true
+      },
+      {
+        "id": 102,
+        "name": "Bread",
+        "category": "Bakery",
+        "price": 30,
+        "inStock": false
+      },
+      {
+        "id": 103,
+        "name": "Apples",
+        "category": "Fruits",
+        "price": 120,
+        "inStock": true
+      }
+    ],
+    "sales": {
+      "daily": [
+        {"date": "2025-10-13", "total": 4500},
+        {"date": "2025-10-14", "total": 5200}
+      ],
+      "monthlyTotal": 135000
+    }
+  }
+}

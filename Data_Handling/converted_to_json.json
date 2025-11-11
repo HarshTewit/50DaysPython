@@ -1,0 +1,50 @@
+[
+  {
+    "Date": "2025-10-11",
+    "City": "london",
+    "Temperature": "287.41",
+    "Condition": "overcast clouds"
+  },
+  {
+    "Date": "2025-10-12",
+    "City": "mumbai",
+    "Temperature": "302.2",
+    "Condition": "clear sky"
+  },
+  {
+    "Date": "2025-10-13",
+    "City": "texas",
+    "Temperature": "290.7",
+    "Condition": "clear sky"
+  },
+  {
+    "Date": "2025-10-14",
+    "City": "jaipur",
+    "Temperature": "301.6",
+    "Condition": "clear sky"
+  },
+  {
+    "Date": "2025-10-15",
+    "City": "raipur",
+    "Temperature": "302.02",
+    "Condition": "few clouds"
+  },
+  {
+    "Date": "2025-10-16",
+    "City": "lucknow",
+    "Temperature": "303.71",
+    "Condition": "clear sky"
+  },
+  {
+    "Date": "2025-10-17",
+    "City": "noida",
+    "Temperature": "303.96",
+    "Condition": "clear sky"
+  },
+  {
+    "Date": "2025-10-18",
+    "City": "gurgaon",
+    "Temperature": "302.94",
+    "Condition": "clear sky"
+  }
+]

@@ -15,7 +15,12 @@ def emojiAdder(my_dict):
     final = ""
     for s in my_dict:
         cleaned = s.lower().strip(".,/!?")
-        emoji = emoji_map.get(cleaned, "")
+        emoji = emoji_map.get(cleaned, "") 
+        """
+        We can also do emoji_map[cleaned] but if cleaned does not exist in the dictionary 
+        it will throw an error. 
+        So we use dictionary_name.get()
+        """
         if(emoji):
             final += f"{s} {emoji} "
         else:

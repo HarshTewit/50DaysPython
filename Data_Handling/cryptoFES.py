@@ -56,6 +56,18 @@ def list_notes():
     for i, note in enumerate(data, 1):
         print(f"{i}. {note["title"]} {note["timestamp"]}")
 
+def search_notes():
+    keyword = input("Enter the keyword to search for.").strip().lower()
+   # lower()
+    data = load_vault()
+    found = [note for note in data if keyword in note['title'].lower()]
+    if not found:
+        print("NO MATCHING NOTES")
+    else:
+        for note in found:
+            print(f"{note['title']} {note['timestamp']}")
+
+
 def view_note():
     list_notes()
     try:
@@ -85,7 +97,7 @@ def main():
         match choice:
             case '1':add_note()
             case '2':view_note()
-            case '3':list_notes()
+            case '3':search_notes()
             case '4':list_notes()
             case '5': return 
             case _: print("Invalid Choice")

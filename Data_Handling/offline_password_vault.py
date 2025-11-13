@@ -48,19 +48,30 @@ def view_credentials():
             print(f"{website} -||- {username} -||- {password}")
 
 def update_credentials():
-    website = input("Website.. ").strip()
-    username = input("Username.. ").strip()
-    password = input("Password.. ").strip()
+    website = input("Which website credentials do you wish to update?").strip()
 
-    strength = password_strength(password)
+    updated_lines = []
 
-    line = f"{website}||{username}||{password}"
-    encoded_line = encode(line)
+    with open(VAULT_FILE, "r") as f:
+        lines = f.readlines()
 
-    with open(VAULT_FILE, 'w', encoding='utf-8') as f:
-                
-                f.write(f"{encoded_line}\n")
+    with open(VAULT_FILE, 'r', encoding='utf-8') as f:
+        for encoded_line in f:
+            line = decode(encoded_line.strip())
+            website_old, username_old, password_old = line.split("||")
+            if(website_old == website):
+                new_username = input("Enter the new username")
+                new_password = input("Enter the new password")
+                new_line = encode(f"{website}||{new_username}||{new_password}")
+                updated_lines.append(new_line + "\n")
+               # f.write(new_line + "\n")
+            else:
+                updated_lines.append(encoded_line + "\n")
+              #  f.write(encoded_line + "\n")
     
+    with open(VAULT_FILE, 'w', encoding="utf-8") as f:
+        f.writelines(updated_lines)
+        
     print("Credentials saved!")
         
 def main():

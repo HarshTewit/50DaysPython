@@ -19,8 +19,6 @@ def scrape_page(url):
     
     data = BeautifulSoup(response.text, "html.parser")
     books = []
-    title = []
-    prices = []
 
     url_holder = data.select_one("li.next > a")
     next_url = urljoin(url, url_holder.get("href")) if url_holder else None
